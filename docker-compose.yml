@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: book_hunt_app
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+      - "8000:8000"
+    depends_on:
+      - qdrant
+
+  qdrant:
+    image: qdrant/qdrant
+    container_name: qdrant
+    environment:
+      QDRANT_API_KEY: ${QDRANT_API_KEY}
+      QDRANT_URL: ${QDRANT_URL}
+    ports:
+      - "6333:6333"

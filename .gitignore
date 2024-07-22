@@ -1,0 +1,25 @@
+# Dependency directories
+node_modules/
+__pycache__/
+
+# Python specific
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+ENV/
+venv.bak/
+.idea/
+
+# Environment variables
+.env
+
+# Docker specific
+docker-compose.override.yml
+docker-compose.local.yml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+.vercel
